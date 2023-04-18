@@ -3,7 +3,7 @@ package dao;
 import java.util.Date;
 
 public class VocaItem {
-	private String word; // 단어
+	private String word; // 단
 	private String desc; // 내용
 	private Date current_date; // 입력시간
 	
