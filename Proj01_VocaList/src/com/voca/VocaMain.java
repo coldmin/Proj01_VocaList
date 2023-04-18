@@ -39,13 +39,13 @@ public class VocaMain {
 				
 			case "list_name":
 				l.sortByName();
-				System.out.println("가나다순으로 정렬하였습니다.");
+				System.out.println("  가나다순으로 정렬하였습니다.");
 				isList = true;
 				break;	
 				
 			case "list_date":
 				l.sortByDate();
-				System.out.println("날짜순으로 정렬하였습니다.");
+				System.out.println("  날짜순으로 정렬하였습니다.");
 				isList = true;
 				break;
 				
@@ -58,7 +58,7 @@ public class VocaMain {
 				break;
 				
 			default:
-				System.out.println("정확한 명령어를 입력하세요. (도움말 - help)");
+				System.out.println("  정확한 명령어를 입력하세요. (도움말 - help)");
 				break;	
 			
 			}

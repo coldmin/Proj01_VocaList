@@ -39,7 +39,7 @@ public class VocaItem {
 	
 	@Override
 	public String toString() {
-		return "[" + word + "]" + desc + " - " + current_date;
+		return "  [" + word + "]" +" "+ desc + "(" + current_date + ")";
 	}
 	
 	
