@@ -31,10 +31,6 @@
 
 ![image](https://user-images.githubusercontent.com/130851245/232737816-a2549b6f-6c56-477f-ac7e-2eadabc167cd.png)
 
-  - 단어 추가, 삭제, 수정: add, del, edit 명령어를 실행 시 동작 화면
-
-![image](https://user-images.githubusercontent.com/130851245/232737816-a2549b6f-6c56-477f-ac7e-2eadabc167cd.png)
-
   - 단어 중복 검사 및 오류 메시지
 
 ![image](https://user-images.githubusercontent.com/130851245/232741839-ed44acf2-9569-445f-8def-d01e1f3ec804.png)
