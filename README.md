@@ -9,6 +9,7 @@
  ① 데이터 파일로 저장 및 불러오기
   - saveList() 메소드 추가. FileWriter 클래스 사용
   - loadList() 메소드 추가. BufferedReader, FileReader 클래스 사용
+
  ② 날짜 정보를 문자열로 다루도록 수정
   - current_date 변수 타입을 Date에서 String 타입으로 변경하고, SimpleDateFormat 클래스를 사용해 문자열로 저장하도록 변경
 
