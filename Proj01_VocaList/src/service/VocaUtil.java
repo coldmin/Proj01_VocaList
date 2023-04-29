@@ -23,7 +23,7 @@ public class VocaUtil {
 		
 		word = sc.next();
 		if(list.isDuplicate(word)) {
-			System.out.println("  단어가 이미 존재합니다!");
+			System.out.println("  단어가 이미 존재합니다.");
 			return;
 		}
 		sc.nextLine();
