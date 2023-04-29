@@ -11,8 +11,8 @@ public class Menu {
 		System.out.println("   2. del - 단어 삭제");
 		System.out.println("   3. edit - 단어 수정");
 		System.out.println("   4. list - 전체 목록");
-		System.out.println("   5. list_name - 가나다순 정렬");
-		System.out.println("   6. list_date - 날짜순 정렬");
+		System.out.println("   5. listName - 가나다순 정렬");
+		System.out.println("   6. listDate - 날짜순 정렬");
 		System.out.println("   7. exit - 종료");
 		
 	}

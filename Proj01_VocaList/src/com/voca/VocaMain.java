@@ -14,6 +14,7 @@ public class VocaMain {
 		boolean isList = false;
 		boolean quit = false;
 		
+		VocaUtil.loadList(l, "vocalist.txt");
 		Menu.displaymenu();
 		do {
 			Menu.prompt();
@@ -37,13 +38,13 @@ public class VocaMain {
 				VocaUtil.listAll(l);
 				break;
 				
-			case "list_name":
+			case "listName":
 				l.sortByName();
 				System.out.println("  가나다순으로 정렬하였습니다.");
 				isList = true;
 				break;	
 				
-			case "list_date":
+			case "listDate":
 				l.sortByDate();
 				System.out.println("  날짜순으로 정렬하였습니다.");
 				isList = true;
@@ -54,6 +55,7 @@ public class VocaMain {
 				break;
 				
 			case "exit":
+				VocaUtil.saveList(l, "vocalist.txt");
 				quit = true;
 				break;
 				

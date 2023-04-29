@@ -1,6 +1,13 @@
 package service;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 import dao.VocaItem;
 import dao.VocaList;
@@ -41,6 +48,8 @@ public class VocaUtil {
 				l.deleteItem(item);
 				System.out.println("  삭제되었습니다.");
 				break;
+			}else {
+				System.out.println("  없는 단어입니다!");
 			}
 		}
 	}
@@ -80,8 +89,50 @@ public class VocaUtil {
 	public static void listAll(VocaList l) {
 		System.out.println("  -- 전체 목록 --");
 		System.out.println();
+		int count = 1;
 		for(VocaItem item : l.getList()) {
-			System.out.println(item.toString());
-		}
+			System.out.println("   "+count+ "." + item.toString());
+			count++;
+		}	
+	}
+		public static void saveList(VocaList l, String filename) {
+			
+			try {
+				Writer w = new FileWriter(filename);
+				for(VocaItem item : l.getList()) {
+					w.write(item.toSaveString());
+				}
+					w.close();
+					System.out.println("모든 데이터가 저장되었습니다.");
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		
+		public static void loadList(VocaList l, String filename) {
+			try {
+				BufferedReader br = new BufferedReader(new FileReader(filename));
+				String line;
+				int count = 0;
+				while((line = br.readLine()) != null) {
+					StringTokenizer st = new StringTokenizer(line, "##");
+					String word = st.nextToken();
+					String description = st.nextToken();
+					String current_date = st.nextToken();
+					VocaItem item = new VocaItem(word, description);
+					item.setCurrent_date(current_date);
+					l.addItem(item);
+					count++;
+				}
+				br.close();
+				System.out.println(count+"개의 항목을 읽었습니다.");
+			}catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				System.out.println(filename+" 파일이 없습니다.");
+				// e.printStackTrace();
+			}catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 }
